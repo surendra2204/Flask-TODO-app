@@ -1,11 +1,69 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>
-      Todo-page
-    </title>
-  </head>
-  <body>
-    <h1>I'm exhausted!!</h1>
-  </body>
-</html>
+{% extends 'partials/base.html' %} <br />
+{% block title %} Home {% endblock %} <br />
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card shadow">
+          <div class="card-header">Statistics</div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h6>Total</h6>
+                    <p class="text-center">10</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h6>Completed</h6>
+                    <p class="text-center">20</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h6>Uncompleted</h6>
+                    <p class="text-center">30</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card shadow">
+          <div class="card-header">TODO Form</div>
+          <div class="card-body">
+            <form action="">
+              <label for="">Title</label>
+              <input
+                class="form-control"
+                type="text"
+                name="title"
+                placeholder="Add your Todo.."
+              />
+              <input class="btn btn-primary mt-2 btn-sm" type="submit" value="Add"/>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-4"></div>
+    <div class="row">
+      <div class="col-md-8">
+        <div class="card shadow">
+          <div class="card-header mb-3">Your Pending TODO's</div>
+          <div class="card-body">
+            <h6>1. Learn Python</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
